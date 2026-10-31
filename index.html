@@ -1,12 +1,385 @@
-Done vai! ✅ Apnar naam **Jubayerul Hasan** ekhon 3 jaygay permanently add kore dilam:
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Type Master BD — বাংলা টাইপিং গেম</title>
+<meta name="description" content="বাংলাদেশের সেরা ফ্রি টাইপিং গেম। বাংলা ও ইংরেজি টাইপিংয়ে দক্ষতা বাড়ান, কম্বো বানান, রেকর্ড ভাঙুন!">
+<meta name="author" content="Jubayerul Hasan">
+<meta name="theme-color" content="#0f0c29">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{--bg1:#0f0c29;--bg2:#302b63;--bg3:#24243e;--accent:#00e5a0;--accent2:#7c4dff;--danger:#ff4d6d;--text:#eef1ff;--muted:#9aa0c9;--card:rgba(255,255,255,.07);--border:rgba(255,255,255,.14)}
+body[data-theme="sunset"]{--bg1:#2b0a3d;--bg2:#7b2ff7;--bg3:#f107a3;--accent:#ffd166;--accent2:#ff6b6b}
+body[data-theme="ocean"]{--bg1:#000428;--bg2:#004e92;--bg3:#000428;--accent:#4dd0e1;--accent2:#80d8ff}
+html,body{height:100%}
+body{font-family:'Hind Siliguri',sans-serif;color:var(--text);background:linear-gradient(-45deg,var(--bg1),var(--bg2),var(--bg3),var(--bg2));background-size:400% 400%;animation:bgShift 20s ease infinite;overflow-x:hidden}
+@keyframes bgShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+#fx{position:fixed;inset:0;pointer-events:none;z-index:50}
+#app{max-width:820px;margin:0 auto;padding:20px 16px;position:relative;z-index:2;min-height:100%;display:flex;flex-direction:column}
+.screen{display:none;flex-direction:column;flex:1;animation:fadeUp .45s ease}
+.screen.active{display:flex}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.logo{font-size:clamp(38px,8vw,64px);font-weight:700;text-align:center;margin-top:6vh;background:linear-gradient(90deg,var(--accent),var(--accent2),var(--accent));background-size:200%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 5s linear infinite;filter:drop-shadow(0 0 24px rgba(0,229,160,.35))}
+@keyframes shine{to{background-position:200%}}
+.tagline{text-align:center;color:var(--muted);margin:8px 0 26px;font-size:clamp(14px,3vw,18px)}
+.chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:26px}
+.chip{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:10px 18px;text-align:center;backdrop-filter:blur(10px);min-width:104px}
+.chip b{display:block;font-size:22px;font-family:'Orbitron',monospace;color:var(--accent)}
+.chip span{font-size:12px;color:var(--muted)}
+.secTitle{font-size:14px;color:var(--muted);letter-spacing:2px;margin:16px 0 10px;text-align:center}
+.modes{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.mode{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:18px 12px;cursor:pointer;text-align:center;color:var(--text);font-family:inherit;backdrop-filter:blur(10px);transition:.25s}
+.mode:hover{transform:translateY(-4px);border-color:var(--accent)}
+.mode.sel{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent),0 8px 30px rgba(0,0,0,.35)}
+.mode .ic{font-size:34px;margin-bottom:6px;display:block}
+.mode b{font-size:17px}
+.mode p{font-size:12px;color:var(--muted);margin-top:4px}
+@media(max-width:560px){.modes{grid-template-columns:1fr}.mode{display:flex;align-items:center;text-align:left;gap:14px}.mode .ic{margin:0}}
+.pills{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.pill{background:var(--card);border:1px solid var(--border);color:var(--text);border-radius:999px;padding:9px 22px;cursor:pointer;font-family:inherit;font-size:14px;transition:.2s}
+.pill.sel{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#08101a;font-weight:700;border-color:transparent}
+.btn{border:none;border-radius:14px;padding:14px 30px;font-size:17px;font-weight:700;cursor:pointer;font-family:inherit;transition:.2s}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#08101a;box-shadow:0 8px 26px rgba(0,0,0,.35)}
+.btn.primary:hover{transform:translateY(-2px)}
+.btn.ghost{background:var(--card);color:var(--text);border:1px solid var(--border)}
+.iconBtn{background:var(--card);border:1px solid var(--border);color:var(--text);width:46px;height:46px;border-radius:12px;font-size:20px;cursor:pointer;transition:.2s}
+.iconBtn:hover{border-color:var(--accent)}
+.actionsRow{display:flex;gap:10px;justify-content:center;margin-top:22px;flex-wrap:wrap;align-items:center}
+.startWrap{text-align:center;margin-top:26px}
+.footer{text-align:center;color:var(--muted);font-size:12px;margin:34px 0 10px}
+.hud{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:12px}
+.progress{height:8px;background:rgba(255,255,255,.1);border-radius:99px;overflow:hidden;margin-bottom:18px}
+.progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:99px;transition:width .2s}
+.textBox{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:26px 22px;backdrop-filter:blur(12px);font-size:clamp(20px,4.4vw,30px);line-height:2;min-height:170px;cursor:text;position:relative}
+.textBox.shake{animation:shake .3s}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+.textBox span{border-radius:5px;padding:1px 0}
+span.p{color:var(--muted)}
+span.d{color:var(--text);background:rgba(0,229,160,.16)}
+span.w{color:var(--danger);background:rgba(255,77,109,.3)}
+span.c{background:rgba(0,229,160,.3);box-shadow:inset 0 -3px 0 var(--accent);animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{box-shadow:inset 0 -3px 0 transparent}}
+.gameHint{text-align:center;color:var(--muted);font-size:13px;margin-top:14px}
+.quitRow{display:flex;justify-content:space-between;align-items:center;margin-top:18px;gap:10px;flex-wrap:wrap}
+.toast{position:fixed;top:16%;left:50%;transform:translateX(-50%) scale(.8);background:rgba(10,10,25,.92);border:1px solid var(--accent);color:var(--accent);padding:10px 24px;border-radius:99px;font-weight:700;opacity:0;pointer-events:none;transition:.25s;z-index:60;white-space:nowrap}
+.toast.show{opacity:1;transform:translateX(-50%) scale(1)}
+.ovl{position:fixed;inset:0;background:rgba(5,5,18,.75);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;z-index:40;flex-direction:column;gap:12px}
+.ovl.show{display:flex}
+.ovl .big{font-size:clamp(70px,20vw,130px);font-weight:800;font-family:'Orbitron',monospace;color:var(--accent);text-shadow:0 0 40px var(--accent);animation:pop .7s ease}
+@keyframes pop{0%{transform:scale(2.2);opacity:0}60%{transform:scale(1)}100%{opacity:1}}
+.ovl p{color:var(--muted)}
+.grade{width:140px;height:140px;border-radius:50%;margin:4vh auto 12px;display:flex;align-items:center;justify-content:center;font-size:64px;font-weight:800;font-family:'Orbitron',monospace;background:var(--card);border:3px solid var(--accent);box-shadow:0 0 44px var(--accent);animation:pop .6s ease}
+.resTitle{text-align:center;font-size:22px;margin-bottom:20px}
+.newBest{text-align:center;color:var(--accent);font-weight:700;margin-bottom:12px;display:none;animation:blink 1s steps(2) infinite}
+.rgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:24px}
+.rgrid .chip b{font-size:19px}
+.resBtns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.modal{position:fixed;inset:0;background:rgba(5,5,18,.7);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;z-index:70;padding:16px}
+.modal.show{display:flex}
+.mcard{background:#14142b;border:1px solid var(--border);border-radius:20px;max-width:520px;width:100%;padding:26px;max-height:86vh;overflow:auto}
+.mcard h2{margin-bottom:12px;color:var(--accent)}
+.mcard li{margin:8px 0 8px 18px;font-size:15px}
+.mcard p{font-size:14px;color:var(--muted);margin:6px 0}
+#hiddenInput{position:fixed;top:0;left:0;width:1px;height:1px;opacity:0;border:none;outline:none;background:transparent;color:transparent;caret-color:transparent}
+@media(max-width:560px){.rgrid{grid-template-columns:repeat(2,1fr)}}
+</style>
+<base target="_blank">
+</head>
+<body data-theme="night">
+<canvas id="fx"></canvas>
+<input id="hiddenInput" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" aria-label="typing input">
+<div id="app">
 
-1. **Home screen er footer e** — "Type Master BD v1.0 • Developed by **Jubayerul Hasan** 🇧🇩" (apnar naam ta theme er accent color e glowing thakbe)
-2. **Result screen e** — game sesh hoye score dekhle niche lekha thakbe "Developer: Jubayerul Hasan"
-3. **Code er hidden meta tag e** — `meta name="author"` — Google/GitHub e search korle apnar naam e credit thake
+<section id="home" class="screen active">
+  <h1 class="logo">টাইপ মাস্টার <span style="font-family:'Orbitron',monospace">BD</span></h1>
+  <p class="tagline">⚡ গতি + 🎯 নির্ভুলতা = 🏆 জয় — বাংলা ও ইংরেজি টাইপিং গেম</p>
+  <div class="chips">
+    <div class="chip"><b id="bestScore">0</b><span>সেরা স্কোর</span></div>
+    <div class="chip"><b id="bestWpm">0</b><span>সেরা WPM</span></div>
+    <div class="chip"><b id="gamesPlayed">0</b><span>ম্যাচ খেলা</span></div>
+  </div>
+  <div class="secTitle">— মোড বেছে নিন —</div>
+  <div class="modes">
+    <button class="mode sel" data-mode="bangla"><span class="ic">🇧🇩</span><div><b>বাংলা</b><p>বাংলা বাক্য টাইপ করুন</p></div></button>
+    <button class="mode" data-mode="english"><span class="ic">🔤</span><div><b>English</b><p>ইংরেজি বাক্য টাইপ করুন</p></div></button>
+    <button class="mode" data-mode="mixed"><span class="ic">🌀</span><div><b>মিক্সড</b><p>দুই ভাষার চ্যালেঞ্জ</p></div></button>
+  </div>
+  <div class="secTitle">— কঠিনতা —</div>
+  <div class="pills" id="pills">
+    <button class="pill sel" data-diff="easy">😊 সহজ</button>
+    <button class="pill" data-diff="medium">🙂 মাধ্যম</button>
+    <button class="pill" data-diff="hard">😈 কঠিন</button>
+  </div>
+  <div class="startWrap"><button class="btn primary" id="startBtn">▶ খেলা শুরু করুন</button></div>
+  <div class="actionsRow">
+    <button class="iconBtn" data-theme-btn="night" title="Night">🌙</button>
+    <button class="iconBtn" data-theme-btn="sunset" title="Sunset">🌇</button>
+    <button class="iconBtn" data-theme-btn="ocean" title="Ocean">🌊</button>
+    <button class="iconBtn" id="soundBtn" title="Sound">🔊</button>
+    <button class="iconBtn" id="howBtn" title="কীভাবে খেলবেন">❓</button>
+  </div>
+  <p class="footer">Type Master BD v1.0 • Developed by <span style="color:var(--accent);font-weight:700">Jubayerul Hasan</span> 🇧🇩</p>
+</section>
 
-Eta ekhon 100% apnar game — ami shudhu code likhesi, idea, decision, ar ownership shob apnar! 😎
+<section id="game" class="screen">
+  <div class="hud">
+    <div class="chip"><b id="hTime">60</b><span>সময়</span></div>
+    <div class="chip"><b id="hScore">0</b><span>স্কোর</span></div>
+    <div class="chip"><b id="hCombo">x1</b><span>কম্বো</span></div>
+    <div class="chip"><b id="hWpm">0</b><span>WPM</span></div>
+  </div>
+  <div class="progress"><i id="progFill"></i></div>
+  <div class="textBox" id="textBox"><p id="targetText"></p></div>
+  <p class="gameHint">⌨️ টাইপ করতে টেক্সট বক্সে ট্যাপ করুন • ভুল হলে Backspace চাপুন</p>
+  <div class="quitRow">
+    <span id="sentenceInfo" style="color:var(--muted);font-size:13px"></span>
+    <button class="btn ghost" id="quitBtn">✖ বন্ধ করুন</button>
+  </div>
+</section>
 
-GitHub e upload er rule same: file ta `index.html` baniye repo te diye Settings → Pages theke hosting on kore felun. Link ta pele apnar naam e credit niye game ta jekuno manushke pathate parben.
+<section id="result" class="screen">
+  <div class="grade" id="grade">S</div>
+  <h2 class="resTitle" id="resTitle"></h2>
+  <p class="newBest" id="newBest">🎉 নতুন রেকর্ড!</p>
+  <div class="rgrid">
+    <div class="chip"><b id="rWpm">0</b><span>WPM</span></div>
+    <div class="chip"><b id="rAcc">0%</b><span>নির্ভুলতা</span></div>
+    <div class="chip"><b id="rScore">0</b><span>স্কোর</span></div>
+    <div class="chip"><b id="rCombo">x1</b><span>সর্বোচ্চ কম্বো</span></div>
+    <div class="chip"><b id="rChars">0</b><span>সঠিক অক্ষর</span></div>
+    <div class="chip"><b id="rSent">0</b><span>বাক্য সম্পন্ন</span></div>
+  </div>
+  <p style="text-align:center;color:var(--muted);font-size:12px;margin-bottom:16px">Developer: <span style="color:var(--accent);font-weight:700">Jubayerul Hasan</span></p>
+  <div class="resBtns">
+    <button class="btn primary" id="againBtn">🔁 আবার খেলুন</button>
+    <button class="btn ghost" id="shareBtn">📤 শেয়ার করুন</button>
+    <button class="btn ghost" id="homeBtn">🏠 হোম</button>
+  </div>
+</section>
 
-R kichu lagbe — color change, naam er style, onno kichu add — sudhu bolben!
+</div>
 
+<div class="ovl" id="countOv"><div class="big" id="countTxt">৩</div></div>
+<div class="ovl" id="focusOv"><p style="font-size:20px">👆 চালিয়ে যেতে ট্যাপ করুন</p></div>
+<div class="toast" id="toast"></div>
+
+<div class="modal" id="howModal">
+  <div class="mcard">
+    <h2>🎮 কীভাবে খেলবেন?</h2>
+    <li><b>বাংলা মোডে খেলতে</b> ডিভাইসে বাংলা কিবোর্ড চালু করুন:</li>
+    <p>• Windows: <b>Win + Space</b> চেপে Bangla (Probhat) সিলেক্ট করুন</p>
+    <p>• Android: Ridmik / GBoard-এ বাংলা লেআউট যোগ করুন</p>
+    <p>• iPhone: Settings → General → Keyboard → বাংলা কিবোর্ড যোগ করুন</p>
+    <li>প্রতিটি সঠিক অক্ষরে পয়েন্ট, প্রতি ১০টি সঠিক টাইপে <b>কম্বো ×২, ×৩...</b>!</li>
+    <li>ভুল টাইপে কম্বো রিসেট — তাই ধৈর্য ধরুন।</li>
+    <li>সময় শেষে WPM, নির্ভুলতা আর গ্রেড (S/A/B/C/D) পাবেন।</li>
+    <li>নতুন রেকর্ড হলে 🎊 কনফেত্তি উৎসব!</li>
+    <div style="text-align:center;margin-top:18px"><button class="btn primary" id="closeHow">বুঝেছি! ✅</button></div>
+  </div>
+</div>
+<script>
+const $=s=>document.querySelector(s);
+const $$=s=>document.querySelectorAll(s);
+
+const DIFF={easy:{time:60,label:'সহজ'},medium:{time:50,label:'মাধ্যম'},hard:{time:45,label:'কঠিন'}};
+
+const SENTENCES={
+bangla:{
+easy:["আমি বাংলায় গান গাই।","সূর্য পূর্ব দিকে ওঠে।","বাংলাদেশ আমার প্রিয় দেশ।","গরমে ঠান্ডা পানি পান করি।","ঢাকা আমাদের রাজধানী।","বই পড়া ভালো অভ্যাস।","মা আমার প্রিয় মানুষ।","নদীর পানি শীতল ও স্বচ্ছ।"],
+medium:["প্রতিদিন ভোরে উঠে স্কুলে যাই এবং নতুন কিছু শিখি।","বাংলাদেশের প্রাকৃতিক সৌন্দর্য দেখতে বিদেশিরা মুগ্ধ হয়।","পরিশ্রম করলে সফলতা আসবেই, এটাই জীবনের নিয়ম।","পদ্মা সেতু আমাদের জাতীয় অহংকারের একটি প্রতীক।","টাইপিং প্র্যাকটিস করলে কাজের গতি অনেক বেড়ে যায়।","বৃষ্টির দিনে গরম চা আর গল্পের জুড়ি নেই।"],
+hard:["কম্পিউটারের কিবোর্ডে দ্রুত ও নির্ভুলভাবে টাইপ করার দক্ষতা আজকের ডিজিটাল যুগে অত্যন্ত গুরুত্বপূর্ণ।","অনুশীলনই সবচেয়ে ভালো শিক্ষক, তাই প্রতিদিন নিয়মিত টাইপিং অনুশীলন করতে হবে।","মনোযোগ ধরে রাখতে পারলে এবং ধৈর্য ধরে চেষ্টা করলে কোনো লক্ষ্যই অসম্ভব নয়।","শিক্ষা মানুষের জীবনের সবচেয়ে মূল্যবান সম্পদ, যা কেউ কাউকে কেড়ে নিতে পারে না।"]
+},
+english:{
+easy:["The quick brown fox jumps over the lazy dog.","Practice makes a person perfect in every skill.","I love to type fast and accurate every day.","Keep calm and type on with steady fingers.","Sunlight brings warmth to the cold morning."],
+medium:["Typing speed grows when you practice with focus and patience.","Bangladesh is a beautiful country with rich culture and history.","Every champion was once a beginner who never gave up.","Fast typing is a superpower in the modern digital world.","Music and tea make the perfect evening combo."],
+hard:["Professional typists use all ten fingers and keep a steady rhythm without looking at the keyboard.","Success in typing comes from muscle memory, consistency, and daily disciplined practice sessions.","The rain falls softly on the tin roof while the whole village sleeps peacefully at night."]
+}
+};
+
+let store=JSON.parse(localStorage.getItem('typemaster_bd')||'{"best":0,"wpm":0,"games":0,"chars":0}');
+function saveStore(){localStorage.setItem('typemaster_bd',JSON.stringify(store))}
+
+let state='home',mode='bangla',diff='easy';
+let target='',idx=0,correct=0,keys=0;
+let score=0,streak=0,combo=0,mult=1,maxCombo=0;
+let timeLeft=0,elapsed=0,timer=null,cdTimer=null,tick=0,sentDone=0,startTime=0,lastSentence='';
+
+/* ---------- AUDIO (Web Audio API, no files needed) ---------- */
+let actx=null,soundOn=true;
+function tone(f,d,type,v,t){if(!soundOn)return;try{actx=actx||new (window.AudioContext||window.webkitAudioContext)();var o=actx.createOscillator(),g=actx.createGain();o.type=type||'sine';o.frequency.value=f;g.gain.setValueAtTime(v||.14,actx.currentTime+(t||0));g.gain.exponentialRampToValueAtTime(.001,actx.currentTime+(t||0)+(d||.08));o.connect(g);g.connect(actx.destination);o.start(actx.currentTime+(t||0));o.stop(actx.currentTime+(t||0)+(d||.08)+.02)}catch(e){}}
+const sfx={
+ok:function(){tone(520+Math.random()*260,.05,'square',.05)},
+bad:function(){tone(150,.16,'sawtooth',.12)},
+combo:function(n){[523,659,784,1046].slice(0,2+Math.min(n,2)).forEach(function(f,i){tone(f,.1,'triangle',.13,i*.08)})},
+count:function(){tone(440,.12,'sine',.16)},
+go:function(){tone(880,.3,'sine',.2)},
+win:function(){[523,659,784,1046,1318].forEach(function(f,i){tone(f,.2,'triangle',.15,i*.13)})},
+done:function(){tone(700,.09,'triangle',.12);tone(940,.12,'triangle',.12,.09)}
+};
+
+/* ---------- PARTICLES ---------- */
+var cv=$('#fx'),cx=cv.getContext('2d'),parts=[];
+function resize(){cv.width=innerWidth;cv.height=innerHeight}
+addEventListener('resize',resize);resize();
+function burst(x,y,color,n,sp){n=n||10;sp=sp||3;for(var i=0;i<n;i++){var a=Math.random()*6.283,s=Math.random()*sp;parts.push({x:x,y:y,vx:Math.cos(a)*s,vy:Math.sin(a)*s-1,g:.08,life:1,decay:.02+Math.random()*.02,color:color,size:2+Math.random()*3})}}
+function confetti(){var cols=['#00e5a0','#7c4dff','#ffd166','#ff6b6b','#4dd0e1'];for(var i=0;i<160;i++)parts.push({x:Math.random()*cv.width,y:-20-Math.random()*200,vx:(Math.random()-.5)*2,vy:2+Math.random()*3,g:.03,life:1.6,decay:.004,color:cols[i%5],size:3+Math.random()*4})}
+(function loop(){requestAnimationFrame(loop);cx.clearRect(0,0,cv.width,cv.height);parts=parts.filter(function(p){return p.life>0&&p.y<cv.height+30});for(var i=0;i<parts.length;i++){var p=parts[i];p.x+=p.vx;p.y+=p.vy;p.vy+=p.g;p.life-=p.decay;cx.globalAlpha=Math.max(p.life,0);cx.fillStyle=p.color;cx.fillRect(p.x,p.y,p.size,p.size)}cx.globalAlpha=1})();
+
+/* ---------- TEXT ENGINE ---------- */
+function pickSentence(){var pool;if(mode==='mixed'){pool=(sentDone%2===0)?SENTENCES.bangla[diff]:SENTENCES.english[diff]}else{pool=SENTENCES[mode][diff]}var s;do{s=pool[Math.floor(Math.random()*pool.length)]}while(pool.length>1&&s===lastSentence);lastSentence=s;return s}
+function spans(){return $('#targetText').children}
+function renderText(){var p=$('#targetText');p.innerHTML='';var frag=document.createDocumentFragment();for(var i=0;i<target.length;i++){var sp=document.createElement('span');sp.className='p';if(target[i]===' '){sp.innerHTML='&nbsp;'}else{sp.textContent=target[i]}frag.appendChild(sp)}p.appendChild(frag);markCurrent()}
+function markCurrent(){var sp=spans();for(var i=0;i<sp.length;i++){sp[i].classList.remove('c')}if(idx<sp.length)sp[idx].classList.add('c')}
+function loadSentence(){target=pickSentence();idx=0;renderText();$('#sentenceInfo').textContent='বাক্য '+(sentDone+1)+' • '+(mode==='english'?'English':mode==='bangla'?'বাংলা':'মিক্সড')+' • '+DIFF[diff].label;$('#progFill').style.width='0%'}
+function burstAtCaret(color,n){var sp=spans();if(idx>=sp.length)return;var r=sp[idx].getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2,color||getComputedStyle(document.body).getPropertyValue('--accent').trim(),n)}
+
+/* ---------- GAME FLOW ---------- */
+function show(id){$$('.screen').forEach(function(s){s.classList.remove('active')});$(id).classList.add('active')}
+function refreshHome(){$('#bestScore').textContent=store.best;$('#bestWpm').textContent=store.wpm;$('#gamesPlayed').textContent=store.games}
+
+function startGame(){
+score=0;streak=0;combo=0;mult=1;maxCombo=0;correct=0;keys=0;sentDone=0;elapsed=0;tick=0;
+timeLeft=DIFF[diff].time*1000;
+loadSentence();show('#game');updateHUD();runCountdown();
+}
+
+function runCountdown(){
+state='count';var ov=$('#countOv'),tx=$('#countTxt');ov.classList.add('show');
+var seq=['৩','২','১','গো! 🚀'];var i=0;clearInterval(cdTimer);
+tx.textContent=seq[0];sfx.count();
+cdTimer=setInterval(function(){
+i++;
+if(i<seq.length){tx.textContent=seq[i];if(i<3){sfx.count()}else{sfx.go()}}
+else{clearInterval(cdTimer);ov.classList.remove('show');state='play';focusInput();beginTimer()}
+},750);
+}
+
+function focusInput(){setTimeout(function(){$('#hiddenInput').focus({preventScroll:true})},60)}
+
+function beginTimer(){
+clearInterval(timer);startTime=Date.now();
+timer=setInterval(function(){
+elapsed=Date.now()-startTime;
+timeLeft=DIFF[diff].time*1000-elapsed;
+if(timeLeft<=0){timeLeft=0;updateHUD();finish();return}
+if(++tick%10===0)updateHUD();
+},100);
+}
+
+function handleChar(ch){
+if(state!=='play'||idx>=target.length)return;
+keys++;
+var sp=spans(),expected=target[idx];
+if(ch===expected){
+sp[idx].className='d';correct++;streak++;score+=10*mult;
+if(streak%10===0){combo++;mult=1+combo;maxCombo=Math.max(maxCombo,combo);sfx.combo(combo);toast('🔥 কম্বো x'+mult+'!');burstAtCaret('#ffd166',14)}
+else{sfx.ok();if(Math.random()<.25)burstAtCaret(null,5)}
+idx++;markCurrent();updateHUD();
+$('#progFill').style.width=(idx/target.length*100)+'%';
+if(idx>=target.length)sentenceDone();
+}else{
+sp[idx].className='w c';streak=0;
+if(combo>0)toast('💥 কম্বো শেষ!');combo=0;mult=1;sfx.bad();
+var tb=$('#textBox');tb.classList.remove('shake');void tb.offsetWidth;tb.classList.add('shake');
+updateHUD();
+}
+}
+
+function backspace(){
+if(state!=='play'||idx===0)return;
+idx--;spans()[idx].className='p';markCurrent();
+$('#progFill').style.width=(idx/target.length*100)+'%';
+}
+
+function sentenceDone(){
+sentDone++;var bonus=100+25*mult;score+=bonus;sfx.done();
+toast('✅ বাক্য সম্পন্ন! +'+bonus);burstAtCaret('#00e5a0',20);
+loadSentence();updateHUD();
+}
+
+function updateHUD(){
+$('#hTime').textContent=Math.ceil(timeLeft/1000);
+$('#hScore').textContent=score;
+$('#hCombo').textContent='x'+mult;
+var sec=elapsed/1000;
+$('#hWpm').textContent=sec>3?Math.round((correct/5)/(sec/60)):0;
+}
+
+function colMap(g){return {S:'#ffd166',A:'#00e5a0',B:'#4dd0e1',C:'#b39ddb',D:'#ff8a80'}[g]}
+
+function finish(){
+clearInterval(timer);clearInterval(cdTimer);state='result';
+$('#focusOv').classList.remove('show');
+var mins=Math.max(elapsed/60000,.016);
+var wpm=Math.round((correct/5)/mins);
+var acc=keys?Math.round(correct/keys*100):100;
+store.games++;store.chars+=correct;
+var nb=false;
+if(score>store.best){store.best=score;nb=true}
+if(wpm>store.wpm)store.wpm=wpm;
+saveStore();
+var g,msg;
+if(wpm>=60){g='S';msg='দ্রুতগতির কিংবদন্তি! 👑'}
+else if(wpm>=45){g='A';msg='প্রো টাইপার! 🔥'}
+else if(wpm>=30){g='B';msg='দারুণ অগ্রগতি! 💪'}
+else if(wpm>=15){g='C';msg='ভালো চেষ্টা! আরেকটু প্র্যাকটিস করুন 👍'}
+else{g='D';msg='শুরুটা হয়েছে! প্রতিদিন খেলুন 💡'}
+var gc=colMap(g);
+$('#grade').textContent=g;$('#grade').style.borderColor=gc;$('#grade').style.boxShadow='0 0 44px '+gc;$('#grade').style.color=gc;
+$('#resTitle').textContent=msg;
+$('#rWpm').textContent=wpm;$('#rAcc').textContent=acc+'%';$('#rScore').textContent=score;
+$('#rCombo').textContent='x'+(maxCombo+1);$('#rChars').textContent=correct;$('#rSent').textContent=sentDone;
+$('#newBest').style.display=nb?'block':'none';
+$('#shareBtn').dataset.txt='Type Master BD-তে আমার স্কোর '+score+' পয়েন্ট, '+wpm+' WPM, নির্ভুলতা '+acc+'%! তুমি পারো? 🎮';
+show('#result');sfx.win();
+if(nb||wpm>=40)setTimeout(confetti,300);
+}
+
+/* ---------- TOAST ---------- */
+var toastT=null;
+function toast(msg){var t=$('#toast');t.textContent=msg;t.classList.add('show');clearTimeout(toastT);toastT=setTimeout(function(){t.classList.remove('show')},1200)}
+
+/* ---------- INPUT ---------- */
+var inp=$('#hiddenInput');
+inp.addEventListener('input',function(){
+var v=inp.value;if(!v)return;
+for(var i=0;i<v.length;i++){handleChar(v[i]);if(state!=='play')break}
+inp.value='';
+});
+inp.addEventListener('keydown',function(e){
+if(e.key==='Backspace'||e.key==='Delete'){e.preventDefault();backspace()}
+});
+document.addEventListener('keydown',function(e){
+if(e.key==='Backspace'&&state==='play')e.preventDefault();
+if(e.key==='Enter'&&state==='home')startGame();
+});
+$('#textBox').addEventListener('click',focusInput);
+inp.addEventListener('blur',function(){if(state==='play')$('#focusOv').classList.add('show')});
+$('#focusOv').addEventListener('click',function(){$('#focusOv').classList.remove('show');focusInput()});
+
+/* ---------- UI WIRING ---------- */
+$$('.mode').forEach(function(b){b.addEventListener('click',function(){$$('.mode').forEach(function(x){x.classList.remove('sel')});b.classList.add('sel');mode=b.dataset.mode})});
+$$('#pills .pill').forEach(function(b){b.addEventListener('click',function(){$$('#pills .pill').forEach(function(x){x.classList.remove('sel')});b.classList.add('sel');diff=b.dataset.diff})});
+$$('[data-theme-btn]').forEach(function(b){b.addEventListener('click',function(){document.body.dataset.theme=b.dataset.themeBtn})});
+$('#soundBtn').addEventListener('click',function(){soundOn=!soundOn;$('#soundBtn').textContent=soundOn?'🔊':'🔇';if(soundOn)sfx.ok()});
+$('#howBtn').addEventListener('click',function(){$('#howModal').classList.add('show')});
+$('#closeHow').addEventListener('click',function(){$('#howModal').classList.remove('show')});
+$('#howModal').addEventListener('click',function(e){if(e.target.id==='howModal')e.target.classList.remove('show')});
+$('#startBtn').addEventListener('click',startGame);
+$('#againBtn').addEventListener('click',startGame);
+$('#quitBtn').addEventListener('click',function(){clearInterval(timer);clearInterval(cdTimer);state='home';show('#home');refreshHome()});
+$('#homeBtn').addEventListener('click',function(){state='home';show('#home');refreshHome()});
+$('#shareBtn').addEventListener('click',function(){
+var txt=this.dataset.txt||'Type Master BD খেলে দেখো! 🎮';
+if(navigator.share){navigator.share({title:'Type Master BD',text:txt}).catch(function(){})}
+else if(navigator.clipboard){navigator.clipboard.writeText(txt).then(function(){toast('কপি হয়েছে! 📋')})}
+else{toast('কপি সম্ভব হয়নি')}
+});
+
+refreshHome();
+</script>
+</body>
+</html>
